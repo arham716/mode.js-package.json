@@ -36,6 +36,10 @@ const client = new Client({
 });
 
 client.once("ready", () => {
+  client.user.setPresence({
+    status: "online",
+  });
+
   console.log(`Relay bot online as ${client.user.tag}`);
 });
 
