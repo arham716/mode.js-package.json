@@ -71,8 +71,8 @@ client.on("messageCreate", async (message) => {
         name: `${message.author.username} said:`,
         iconURL: message.author.displayAvatarURL(),
       })
-      .setDescription(content || "*[attachment]*")
-      .setTimestamp(message.createdAt);
+  .setDescription(`**${content || "*[attachment]*"}**`)
+  .setTimestamp(message.createdAt);
 
     const files = [...message.attachments.values()].map((attachment) => ({
       attachment: attachment.url,
